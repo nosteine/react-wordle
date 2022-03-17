@@ -1,22 +1,22 @@
 export const GAME_TITLE = process.env.REACT_APP_GAME_NAME!
 
-export const WIN_MESSAGES = ['Great Job!', 'Awesome', 'Well done!']
+export const WIN_MESSAGES = ['מעולה!', 'כל הכבוד', 'יפה מאוד!']
 export const GAME_COPIED_MESSAGE = 'Game copied to clipboard'
-export const NOT_ENOUGH_LETTERS_MESSAGE = 'Not enough letters'
-export const WORD_NOT_FOUND_MESSAGE = 'Word not found'
+export const NOT_ENOUGH_LETTERS_MESSAGE = 'לא מספיק אותיות'
+export const WORD_NOT_FOUND_MESSAGE = 'מילה לא נמצאה'
 export const HARD_MODE_ALERT_MESSAGE =
   'Hard Mode can only be enabled at the start!'
 export const HARD_MODE_DESCRIPTION =
   'Any revealed hints must be used in subsequent guesses'
 export const HIGH_CONTRAST_MODE_DESCRIPTION = 'For improved color vision'
 export const CORRECT_WORD_MESSAGE = (solution: string) =>
-  `The word was ${solution}`
+  `${solution}המילה היא `
 export const WRONG_SPOT_MESSAGE = (guess: string, position: number) =>
-  `Must use ${guess} in position ${position}`
+  `${position} במיקום ${guess}חובה להשתמש ב`
 export const NOT_CONTAINED_MESSAGE = (letter: string) =>
-  `Guess must contain ${letter}`
-export const ENTER_TEXT = 'Enter'
-export const DELETE_TEXT = 'Delete'
+  `${letter}הניחוש חייב לכלול `
+export const ENTER_TEXT = 'אשר'
+export const DELETE_TEXT = 'מחק'
 export const STATISTICS_TITLE = 'Statistics'
 export const GUESS_DISTRIBUTION_TEXT = 'Guess Distribution'
 export const NEW_WORD_TEXT = 'New word in'

@@ -22,9 +22,9 @@ export const Keyboard = ({
   const charStatuses = getStatuses(guesses)
 
   const onClick = (value: string) => {
-    if (value === 'ENTER') {
+    if (value === 'אשר') {
       onEnter()
-    } else if (value === 'DELETE') {
+    } else if (value === 'מחק') {
       onDelete()
     } else {
       onChar(value)
@@ -33,9 +33,9 @@ export const Keyboard = ({
 
   useEffect(() => {
     const listener = (e: KeyboardEvent) => {
-      if (e.code === 'Enter') {
+      if (e.code === 'אשר') {
         onEnter()
-      } else if (e.code === 'Backspace') {
+      } else if (e.code === 'מחק') {
         onDelete()
       } else {
         const key = localeAwareUpperCase(e.key)
@@ -54,7 +54,7 @@ export const Keyboard = ({
   return (
     <div>
       <div className="flex justify-center mb-1">
-        {['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P'].map((key) => (
+        {['ק','ר','א','ט','ו','פ'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -65,7 +65,7 @@ export const Keyboard = ({
         ))}
       </div>
       <div className="flex justify-center mb-1">
-        {['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L'].map((key) => (
+        {['ש','ד','ג','כ','ע','י','ח','ל'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -76,10 +76,10 @@ export const Keyboard = ({
         ))}
       </div>
       <div className="flex justify-center">
-        <Key width={65.4} value="ENTER" onClick={onClick}>
+        <Key width={65.4} value="אשר" onClick={onClick}>
           {ENTER_TEXT}
         </Key>
-        {['Z', 'X', 'C', 'V', 'B', 'N', 'M'].map((key) => (
+        {['ז','ס','ב','ה','נ','מ','צ','ת'].map((key) => (
           <Key
             value={key}
             key={key}
@@ -88,7 +88,7 @@ export const Keyboard = ({
             isRevealing={isRevealing}
           />
         ))}
-        <Key width={65.4} value="DELETE" onClick={onClick}>
+        <Key width={65.4} value="מחק" onClick={onClick}>
           {DELETE_TEXT}
         </Key>
       </div>
